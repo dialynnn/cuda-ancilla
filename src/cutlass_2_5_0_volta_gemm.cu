@@ -29,9 +29,10 @@
  *
  **************************************************************************************************/
 
-// Modifications and refactoring by "dialynnn".
+// Modifications and refactoring by "dialynnn" / 范金龍
 // CUTLASS version: 2.5.0 (hard requirement)
 // Architecture used: Volta (V100, sm_70)
+// Reference: https://github.com/NVIDIA/cutlass/blob/main/examples/07_volta_tensorop_gemm/volta_tensorop_gemm.cu
 
 #include <cutlass/cutlass.h>
 #include <cutlass/gemm/device/gemm.h>
@@ -177,7 +178,7 @@ static void cutlass_gemm_baseline(
 int main(){
     // Dims
     const int M = 4096;
-    const int N = 128;
+    const int N = 4096;
     const int K = 4096;
     
     // Allocate GPU pointers
